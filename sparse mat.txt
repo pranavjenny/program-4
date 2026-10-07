@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() 
+{
+    int n,m,i,j,s=0,k=0;
+     printf("Enter the size of the sparse matrix:(mxn)");
+     scanf("%d%d",&m,&n);
+       int sm[' '][' '],cm[3][' '];
+
+     printf("\nEnter %d elements of the sparse matrix:",m*n);
+     for(i=0;i<m;i++)
+     {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&sm[i][j]);
+            if(sm[i][j] !=0)
+                s++;   
+        }
+     }
+     printf("\nThe sparse matrix is :");
+      for(i=0;i<m;i++)
+        for(j=0;j<n;j++)
+        
+            printf("%d",sm[i][j]);
+        printf("\n");
+
+      for(i=0;i<m;i++)
+        for(j=0;j<n;j++)
+            if(sm[i][j !=0])
+            {
+                cm[0][k]=i;
+                cm[1][k]=j;
+                cm[2][k]=sm[i][j];
+                k++;
+            }
+
+     printf("\nThe compact matrix is :");
+     for(i=0;i<m;i++)
+     {
+        for(j=0;j<n;j++)
+            printf("%d",cm[i][j]);
+        printf("\n");
+     }
+     return 0;
+}
